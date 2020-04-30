@@ -40,18 +40,18 @@ function draw(){
     if(state == 0){
       image(rabbit, 0, 90);
       text("Hello, welcome to Rabbit Adventure, where you become a rabbit!", 0,10, width, 30);
-      text("Type 'start' to begin!", 0,50, width, 30);
+      text("Type 'start' then press enter to begin!", 0,50, width, 30);
 
     } else if (state == 1){
       image(winter, 0, 0);
       text("You appear in a land covered by snow.", 0,10, width, 30);
       text("You see a trail of footprints not much bigger than yours.", 0,38, width, 30);
-      text("Do you follow the trail or wander around?", 0,62, width, 30);
+      text("Do you follow the trail or wander around? (type 'follow' or 'wander')", 0,62, width, 30);
 
     } else if (state == 2){
       image(wolf, 0, 90);
       text("While you wander around, you encounter a wolf!", 0,10, width, 30);
-      text("Do you try to hide or outrun it?", 0,38, width, 30);
+      text("Do you try to hide or outrun it? (type 'hide' or 'outrun')", 0,38, width, 30);
       if(state == 2 && hasDiedWolf == false){
         choiceTimer();
         if (hasDiedWolf == true){
@@ -67,6 +67,7 @@ function draw(){
       }
       text("You wander for hours, until you find a lush forest.", 0,38, width, 30);
       text("You find some beautiful purple and white plants. Do you eat the plants or the boring grass under your feet?", 0,62, width, 30);
+      text("(type 'plants' or 'grass')", 0, 90, width, 30);
 
     } else if (state == 4){
       image(gameover, 0, 0);
